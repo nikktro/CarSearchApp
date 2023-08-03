@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		678634D02A7BF65D008B3FA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678634CF2A7BF65D008B3FA0 /* ViewController.swift */; };
+		678634D52A7BF824008B3FA0 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678634D32A7BF824008B3FA0 /* CarViewController.swift */; };
+		678634DA2A7BFA05008B3FA0 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678634D92A7BFA05008B3FA0 /* CarModel.swift */; };
+		678634DD2A7C023B008B3FA0 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678634DB2A7C023B008B3FA0 /* CarTableViewCell.swift */; };
+		678634DE2A7C023B008B3FA0 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678634DC2A7C023B008B3FA0 /* CarTableViewCell.xib */; };
 		67CF45912A7BE335003206B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CF45902A7BE335003206B6 /* AppDelegate.swift */; };
-		67CF45932A7BE335003206B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CF45922A7BE335003206B6 /* SceneDelegate.swift */; };
-		67CF45952A7BE335003206B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CF45942A7BE335003206B6 /* ViewController.swift */; };
-		67CF45982A7BE335003206B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67CF45962A7BE335003206B6 /* Main.storyboard */; };
 		67CF459B2A7BE335003206B6 /* CarSearchApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67CF45992A7BE335003206B6 /* CarSearchApp.xcdatamodeld */; };
 		67CF459D2A7BE337003206B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67CF459C2A7BE337003206B6 /* Assets.xcassets */; };
 		67CF45A02A7BE337003206B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67CF459E2A7BE337003206B6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		678634CF2A7BF65D008B3FA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		678634D32A7BF824008B3FA0 /* CarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
+		678634D92A7BFA05008B3FA0 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		678634DB2A7C023B008B3FA0 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
+		678634DC2A7C023B008B3FA0 /* CarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
 		67CF458D2A7BE335003206B6 /* CarSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CF45902A7BE335003206B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		67CF45922A7BE335003206B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		67CF45942A7BE335003206B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		67CF45972A7BE335003206B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67CF459A2A7BE335003206B6 /* CarSearchApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CarSearchApp.xcdatamodel; sourceTree = "<group>"; };
 		67CF459C2A7BE337003206B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67CF459F2A7BE337003206B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +43,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		678634DF2A7C41C4008B3FA0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				67CF45902A7BE335003206B6 /* AppDelegate.swift */,
+				67CF45A12A7BE337003206B6 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		678634E02A7C41CF008B3FA0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				678634CF2A7BF65D008B3FA0 /* ViewController.swift */,
+				678634D32A7BF824008B3FA0 /* CarViewController.swift */,
+				678634DB2A7C023B008B3FA0 /* CarTableViewCell.swift */,
+				678634DC2A7C023B008B3FA0 /* CarTableViewCell.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		678634E12A7C41DD008B3FA0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				678634D92A7BFA05008B3FA0 /* CarModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		678634E22A7C41E4008B3FA0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				67CF459C2A7BE337003206B6 /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		678634E32A7C41F1008B3FA0 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				67CF459E2A7BE337003206B6 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
 		67CF45842A7BE335003206B6 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +106,11 @@
 		67CF458F2A7BE335003206B6 /* CarSearchApp */ = {
 			isa = PBXGroup;
 			children = (
-				67CF45902A7BE335003206B6 /* AppDelegate.swift */,
-				67CF45922A7BE335003206B6 /* SceneDelegate.swift */,
-				67CF45942A7BE335003206B6 /* ViewController.swift */,
-				67CF45962A7BE335003206B6 /* Main.storyboard */,
-				67CF459C2A7BE337003206B6 /* Assets.xcassets */,
-				67CF459E2A7BE337003206B6 /* LaunchScreen.storyboard */,
-				67CF45A12A7BE337003206B6 /* Info.plist */,
+				678634E12A7C41DD008B3FA0 /* Models */,
+				678634E02A7C41CF008B3FA0 /* ViewControllers */,
+				678634DF2A7C41C4008B3FA0 /* App */,
+				678634E32A7C41F1008B3FA0 /* StoryBoards */,
+				678634E22A7C41E4008B3FA0 /* Sources */,
 				67CF45992A7BE335003206B6 /* CarSearchApp.xcdatamodeld */,
 			);
 			path = CarSearchApp;
@@ -128,9 +174,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678634DE2A7C023B008B3FA0 /* CarTableViewCell.xib in Resources */,
 				67CF45A02A7BE337003206B6 /* LaunchScreen.storyboard in Resources */,
 				67CF459D2A7BE337003206B6 /* Assets.xcassets in Resources */,
-				67CF45982A7BE335003206B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,24 +187,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67CF45952A7BE335003206B6 /* ViewController.swift in Sources */,
+				678634D02A7BF65D008B3FA0 /* ViewController.swift in Sources */,
+				678634DA2A7BFA05008B3FA0 /* CarModel.swift in Sources */,
+				678634DD2A7C023B008B3FA0 /* CarTableViewCell.swift in Sources */,
 				67CF45912A7BE335003206B6 /* AppDelegate.swift in Sources */,
 				67CF459B2A7BE335003206B6 /* CarSearchApp.xcdatamodeld in Sources */,
-				67CF45932A7BE335003206B6 /* SceneDelegate.swift in Sources */,
+				678634D52A7BF824008B3FA0 /* CarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		67CF45962A7BE335003206B6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				67CF45972A7BE335003206B6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		67CF459E2A7BE337003206B6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -293,12 +333,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T2HBBQ5KF9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CarSearchApp/Info.plist;
+				INFOPLIST_FILE = CarSearchApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +346,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.home.CarSearchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,12 +364,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T2HBBQ5KF9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CarSearchApp/Info.plist;
+				INFOPLIST_FILE = CarSearchApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,9 +377,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.home.CarSearchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

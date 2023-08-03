@@ -11,9 +11,9 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) { [weak self] in
+      self?.navigationController?.pushViewController(CarViewController() , animated: true)
+    }
   }
 
-
 }
-
