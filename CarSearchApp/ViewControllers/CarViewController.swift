@@ -43,8 +43,12 @@ private extension CarViewController {
 
   func setupNavigationBar() {
     navigationItem.hidesBackButton = true
+    title = "Cars"
+    navigationController?.navigationBar.prefersLargeTitles = true
+    navigationController?.navigationBar.tintColor = UIColor.orange
+
     let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
-    let sort = UIBarButtonItem(title: "Sort", style: .plain, target: self, action: #selector(sortTapped))
+    let sort = UIBarButtonItem(title: "Price sort", style: .plain, target: self, action: #selector(sortTapped))
     navigationItem.rightBarButtonItems = [add, sort]
   }
 
@@ -54,7 +58,7 @@ private extension CarViewController {
   }
 
   @objc func addTapped() {
-    print("add button tapped")
+    present(UINavigationController(rootViewController:AddCarViewController(vcTitle: "Add Car")), animated: true)
   }
 
   @objc func sortTapped() {

@@ -16,11 +16,11 @@ class CarTableViewCell: UITableViewCell {
   @IBOutlet weak var transmissionLabel: UILabel!
 
   func configure(with car: CarModel) {
-    brandModelLabel.text = car.brand.rawValue + " " + car.model
+    brandModelLabel.text = car.brand + " " + car.model
     priceLabel.text = "🏷️ \(car.price) $"
-    bodyLabel.text = car.body.rawValue
-    engineLabel.text = car.engine.rawValue
-    transmissionLabel.text = car.transmission.rawValue
+    bodyLabel.text = car.body
+    engineLabel.text = car.engine
+    transmissionLabel.text = car.transmission
   }
 
 }
