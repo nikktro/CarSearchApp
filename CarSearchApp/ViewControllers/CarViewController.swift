@@ -111,7 +111,6 @@ extension CarViewController {
     let carDetailsVC = CarDetailsViewController(vcTitle: "Edit Car", car: car, rowSelected: indexPath)
     carDetailsVC.delegate = self
     present(UINavigationController(rootViewController: carDetailsVC), animated: true)
-
   }
 
   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

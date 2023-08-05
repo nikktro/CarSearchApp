@@ -58,16 +58,7 @@ class CarDetailsViewController: UIViewController{
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
-
-    if let car = car {
-      brandTextField.text = car.brand
-      modelTextField.text = car.model
-      bodyTextField.text = car.body
-      engineTextField.text = car.engine
-      transmissionTextField.text = car.transmission
-      priceTextField.text = String(car.price)
-    }
-
+    updateTextFieldFor(car: car)
   }
 
   private func addTextField(_ placeholder: String) -> UITextField{
@@ -86,6 +77,17 @@ class CarDetailsViewController: UIViewController{
     button.layer.cornerRadius = 4
     button.addTarget(self, action: action, for: .touchUpInside)
     return button
+  }
+
+  private func updateTextFieldFor(car: Car?) {
+    if let car = car {
+      brandTextField.text = car.brand
+      modelTextField.text = car.model
+      bodyTextField.text = car.body
+      engineTextField.text = car.engine
+      transmissionTextField.text = car.transmission
+      priceTextField.text = String(car.price)
+    }
   }
 
 }
