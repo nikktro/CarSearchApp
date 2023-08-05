@@ -12,7 +12,7 @@
 		678634DA2A7BFA05008B3FA0 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678634D92A7BFA05008B3FA0 /* CarModel.swift */; };
 		678634DD2A7C023B008B3FA0 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678634DB2A7C023B008B3FA0 /* CarTableViewCell.swift */; };
 		678634DE2A7C023B008B3FA0 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678634DC2A7C023B008B3FA0 /* CarTableViewCell.xib */; };
-		678634E52A7D0D68008B3FA0 /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678634E42A7D0D68008B3FA0 /* AddCarViewController.swift */; };
+		678634E52A7D0D68008B3FA0 /* CarDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678634E42A7D0D68008B3FA0 /* CarDetailsViewController.swift */; };
 		678634EA2A7DAA06008B3FA0 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678634E92A7DAA06008B3FA0 /* StorageManager.swift */; };
 		67CF45912A7BE335003206B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CF45902A7BE335003206B6 /* AppDelegate.swift */; };
 		67CF459B2A7BE335003206B6 /* CarSearchApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67CF45992A7BE335003206B6 /* CarSearchApp.xcdatamodeld */; };
@@ -26,7 +26,7 @@
 		678634D92A7BFA05008B3FA0 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
 		678634DB2A7C023B008B3FA0 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		678634DC2A7C023B008B3FA0 /* CarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
-		678634E42A7D0D68008B3FA0 /* AddCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
+		678634E42A7D0D68008B3FA0 /* CarDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailsViewController.swift; sourceTree = "<group>"; };
 		678634E92A7DAA06008B3FA0 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		67CF458D2A7BE335003206B6 /* CarSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CF45902A7BE335003206B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 				678634D32A7BF824008B3FA0 /* CarViewController.swift */,
 				678634DB2A7C023B008B3FA0 /* CarTableViewCell.swift */,
 				678634DC2A7C023B008B3FA0 /* CarTableViewCell.xib */,
-				678634E42A7D0D68008B3FA0 /* AddCarViewController.swift */,
+				678634E42A7D0D68008B3FA0 /* CarDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				678634E52A7D0D68008B3FA0 /* AddCarViewController.swift in Sources */,
+				678634E52A7D0D68008B3FA0 /* CarDetailsViewController.swift in Sources */,
 				678634D02A7BF65D008B3FA0 /* ViewController.swift in Sources */,
 				678634DA2A7BFA05008B3FA0 /* CarModel.swift in Sources */,
 				678634DD2A7C023B008B3FA0 /* CarTableViewCell.swift in Sources */,

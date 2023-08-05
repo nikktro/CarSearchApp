@@ -7,9 +7,11 @@
 
 import UIKit
 
-class AddCarViewController: UIViewController{
+class CarDetailsViewController: UIViewController{
 
-  var vcTitle: String
+  let vcTitle: String
+  let car: Car?
+  let rowSelected: IndexPath?
 
   var delegate: AddCarViewControllerDelegate?
 
@@ -42,8 +44,10 @@ class AddCarViewController: UIViewController{
     return addButton(title: "Save", color: buttonColor, action: #selector(save))
   }()
 
-  init(vcTitle: String) {
+  init(vcTitle: String, car: Car? = nil, rowSelected: IndexPath? = nil) {
     self.vcTitle = vcTitle
+    self.car = car
+    self.rowSelected = rowSelected
     super.init(nibName: nil, bundle: nil)
   }
 
@@ -54,6 +58,16 @@ class AddCarViewController: UIViewController{
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
+
+    if let car = car {
+      brandTextField.text = car.brand
+      modelTextField.text = car.model
+      bodyTextField.text = car.body
+      engineTextField.text = car.engine
+      transmissionTextField.text = car.transmission
+      priceTextField.text = String(car.price)
+    }
+
   }
 
   private func addTextField(_ placeholder: String) -> UITextField{
@@ -76,7 +90,7 @@ class AddCarViewController: UIViewController{
 
 }
 
-private extension AddCarViewController {
+private extension CarDetailsViewController {
 
   func setupUI() {
     view.backgroundColor = .white
@@ -129,8 +143,13 @@ private extension AddCarViewController {
     guard let transmission = transmissionTextField.text, transmission.count > 0 else { return }
     guard let price = priceTextField.text, let priceInt = Int(price), priceInt > 0 else { return }
 
-    StorageManager.shared.save(brand, model, body, engine, transmission, price) { car in
-      delegate?.appendTable(with: car)
+    if let car = self.car, let rowSelected = rowSelected {
+      StorageManager.shared.edit(car, newCarParameters: brand, model, body, engine, transmission, price)
+      delegate?.reloadRow(with: rowSelected)
+    } else {
+      StorageManager.shared.save(brand, model, body, engine, transmission, price) { car in
+        delegate?.appendTable(with: car)
+      }
     }
     dismiss(animated: true)
   }

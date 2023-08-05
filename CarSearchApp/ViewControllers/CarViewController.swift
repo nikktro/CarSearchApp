@@ -11,6 +11,7 @@ typealias TableViewProtocols = UITableViewDelegate & UITableViewDataSource
 
 protocol AddCarViewControllerDelegate {
   func appendTable(with car: Car)
+  func reloadRow(with indexPath: IndexPath)
 }
 
 class CarViewController: UIViewController {
@@ -63,7 +64,7 @@ private extension CarViewController {
   }
 
   @objc func addTapped() {
-    let addCarVC = AddCarViewController(vcTitle: "Add Car")
+    let addCarVC = CarDetailsViewController(vcTitle: "Add Car")
     addCarVC.delegate = self
     present(UINavigationController(rootViewController: addCarVC), animated: true)
   }
@@ -104,7 +105,13 @@ extension CarViewController: TableViewProtocols {
 // MARK: - UITableViewDelegate
 extension CarViewController {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      tableView.deselectRow(at: indexPath, animated: true)
+    tableView.deselectRow(at: indexPath, animated: true)
+    let car = cars[indexPath.row]
+
+    let carDetailsVC = CarDetailsViewController(vcTitle: "Edit Car", car: car, rowSelected: indexPath)
+    carDetailsVC.delegate = self
+    present(UINavigationController(rootViewController: carDetailsVC), animated: true)
+
   }
 
   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -124,6 +131,10 @@ extension CarViewController: AddCarViewControllerDelegate {
         at: [IndexPath(row: self.cars.count - 1, section: 0)],
         with: .automatic
     )
+  }
+
+  func reloadRow(with indexPath: IndexPath) {
+    self.tableView.reloadRows(at: [indexPath], with: .automatic)
   }
 }
 

@@ -53,13 +53,13 @@ class StorageManager {
     savaContext()
   }
 
-  func edit(_ car: Car, newCar: Car) {
-    car.brand = newCar.brand
-    car.model = newCar.model
-    car.body = newCar.body
-    car.engine = newCar.engine
-    car.transmission = newCar.transmission
-    car.price = newCar.price
+  func edit(_ car: Car, newCarParameters: String...) {
+    car.brand = newCarParameters[0]
+    car.model = newCarParameters[1]
+    car.body = newCarParameters[2]
+    car.engine = newCarParameters[3]
+    car.transmission = newCarParameters[4]
+    car.price = Int64(newCarParameters[5]) ?? 0
     savaContext()
   }
 
