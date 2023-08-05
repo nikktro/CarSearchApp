@@ -11,6 +11,8 @@ class AddCarViewController: UIViewController{
 
   var vcTitle: String
 
+  var delegate: AddCarViewControllerDelegate?
+
   private lazy var brandTextField: UITextField = {
     addTextField("Brand")
   }()
@@ -125,8 +127,12 @@ private extension AddCarViewController {
     guard let body = bodyTextField.text, body.count > 0 else { return }
     guard let engine = engineTextField.text, engine.count > 0 else { return }
     guard let transmission = transmissionTextField.text, transmission.count > 0 else { return }
-    guard let priceString = priceTextField.text, let price = Int(priceString), price > 0 else { return }
-    // TODO: save new car
+    guard let price = priceTextField.text, let priceInt = Int(price), priceInt > 0 else { return }
+
+    StorageManager.shared.save(brand, model, body, engine, transmission, price) { car in
+      delegate?.appendTable(with: car)
+    }
+    dismiss(animated: true)
   }
 
   @objc func cancel() {

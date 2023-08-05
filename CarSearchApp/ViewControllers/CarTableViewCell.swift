@@ -15,8 +15,8 @@ class CarTableViewCell: UITableViewCell {
   @IBOutlet weak var engineLabel: UILabel!
   @IBOutlet weak var transmissionLabel: UILabel!
 
-  func configure(with car: CarModel) {
-    brandModelLabel.text = car.brand + " " + car.model
+  func configure(with car: Car) {
+    brandModelLabel.text = (car.brand ?? "") + " " + (car.model ?? "")
     priceLabel.text = "🏷️ \(car.price) $"
     bodyLabel.text = car.body
     engineLabel.text = car.engine

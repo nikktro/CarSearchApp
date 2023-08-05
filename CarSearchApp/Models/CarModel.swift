@@ -13,28 +13,15 @@ struct CarModel {
   let body: String
   let engine: String
   let transmission: String
-  var price = price()
+  var price: String
 
-  static func getCarList() -> [CarModel] {
-    var cars: [CarModel] = []
-
-    cars.append(CarModel(brand: "Volvo", model: "C30", body: "hatback", engine: "gasoline", transmission: "automatic"))
-    cars.append(CarModel(brand: "Volvo", model: "S40", body: "sedan", engine: "gasoline", transmission: "automatic"))
-    cars.append(CarModel(brand: "Mazda", model: "CX5", body: "suv", engine: "gasoline", transmission: "automatic"))
-    cars.append(CarModel(brand: "Citroen", model: "DS4", body: "sedan", engine: "gasoline", transmission: "mechanical"))
-    cars.append(CarModel(brand: "Mazda", model: "3", body: "sedan", engine: "gasoline", transmission: "mechanical"))
-    cars.append(CarModel(brand: "Mazda", model: "CX3", body: "hatback", engine: "gasoline", transmission: "automatic"))
-    cars.append(CarModel(brand: "Volvo", model: "D40", body: "hatback", engine: "electric", transmission: "automatic"))
-    cars.append(CarModel(brand: "Citroen", model: "C4", body: "sedan", engine: "gasoline", transmission: "automatic"))
-    cars.append(CarModel(brand: "Citroen", model: "C3", body: "hatback", engine: "gasoline", transmission: "mechanical"))
-    cars.append(CarModel(brand: "Mazda", model: "C30", body: "hatback", engine: "electric", transmission: "automatic"))
-    cars.append(CarModel(brand: "Citroen", model: "DS3", body: "hatback", engine: "gasoline", transmission: "mechanical"))
-
-    return cars
-  }
-
-  private static func price() -> Int {
-    return Int.random(in: 10000...50000)
+  static func getRandomCar() -> CarModel {
+    CarModel(brand: ["Volvo", "Mazda", "Citroen"].randomElement() ?? "",
+             model: ["C30", "S40", "CX5", "CX9", "DS3", "DS4", "DS5"].randomElement() ?? "",
+             body: ["Hatch", "Sedan", "Wagon", "SUV"].randomElement() ?? "",
+             engine: ["2.0 Gasoline", "2.5 Gasoline", "2.0 Diesel", "2.4 Diesel", "Electric" ].randomElement() ?? "",
+             transmission: ["Automatic", "Variator", "Mechanical"].randomElement() ?? "",
+             price: String(Int.random(in: 10000...50000)))
   }
 
 }

@@ -9,16 +9,20 @@ import UIKit
 
 typealias TableViewProtocols = UITableViewDelegate & UITableViewDataSource
 
+protocol AddCarViewControllerDelegate {
+  func appendTable(with car: Car)
+}
+
 class CarViewController: UIViewController {
 
   private var tableView: UITableView!
-  private var cars = CarModel.getCarList().shuffled()
+  private var cars: [Car] = []
   private var priceAscending = true
 
   override func viewDidLoad() {
     super.viewDidLoad()
     setup()
-    setupTableViewDelegateAndDataSource()
+    fetchData()
   }
 
 }
@@ -27,6 +31,7 @@ private extension CarViewController {
 
   func setup() {
     setupUI()
+    setupTableViewDelegateAndDataSource()
   }
 
   func setupUI() {
@@ -58,7 +63,9 @@ private extension CarViewController {
   }
 
   @objc func addTapped() {
-    present(UINavigationController(rootViewController:AddCarViewController(vcTitle: "Add Car")), animated: true)
+    let addCarVC = AddCarViewController(vcTitle: "Add Car")
+    addCarVC.delegate = self
+    present(UINavigationController(rootViewController: addCarVC), animated: true)
   }
 
   @objc func sortTapped() {
@@ -67,8 +74,20 @@ private extension CarViewController {
     tableView.reloadData()
   }
 
+  func fetchData() {
+    StorageManager.shared.fetchData { result in
+      switch result {
+      case .success(let cars):
+        self.cars = cars
+      case .failure(let error):
+        print(error.localizedDescription)
+      }
+    }
+  }
+
 }
 
+// MARK: - UITableViewDataSource
 extension CarViewController: TableViewProtocols {
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -80,5 +99,31 @@ extension CarViewController: TableViewProtocols {
     cell.configure(with: cars[indexPath.row])
     return cell
   }
-
 }
+
+// MARK: - UITableViewDelegate
+extension CarViewController {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      tableView.deselectRow(at: indexPath, animated: true)
+  }
+
+  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    if editingStyle == .delete {
+      StorageManager.shared.delete(cars[indexPath.row])
+      cars.remove(at: indexPath.row)
+      tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+  }
+}
+
+// MARK: - AddCarViewControllerDelegate
+extension CarViewController: AddCarViewControllerDelegate {
+  func appendTable(with car: Car) {
+    cars.append(car)
+    self.tableView.insertRows(
+        at: [IndexPath(row: self.cars.count - 1, section: 0)],
+        with: .automatic
+    )
+  }
+}
+

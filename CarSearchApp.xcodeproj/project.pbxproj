@@ -13,6 +13,7 @@
 		678634DD2A7C023B008B3FA0 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678634DB2A7C023B008B3FA0 /* CarTableViewCell.swift */; };
 		678634DE2A7C023B008B3FA0 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678634DC2A7C023B008B3FA0 /* CarTableViewCell.xib */; };
 		678634E52A7D0D68008B3FA0 /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678634E42A7D0D68008B3FA0 /* AddCarViewController.swift */; };
+		678634EA2A7DAA06008B3FA0 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678634E92A7DAA06008B3FA0 /* StorageManager.swift */; };
 		67CF45912A7BE335003206B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CF45902A7BE335003206B6 /* AppDelegate.swift */; };
 		67CF459B2A7BE335003206B6 /* CarSearchApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67CF45992A7BE335003206B6 /* CarSearchApp.xcdatamodeld */; };
 		67CF459D2A7BE337003206B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67CF459C2A7BE337003206B6 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		678634DB2A7C023B008B3FA0 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		678634DC2A7C023B008B3FA0 /* CarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
 		678634E42A7D0D68008B3FA0 /* AddCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
+		678634E92A7DAA06008B3FA0 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		67CF458D2A7BE335003206B6 /* CarSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CF45902A7BE335003206B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67CF459A2A7BE335003206B6 /* CarSearchApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CarSearchApp.xcdatamodel; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 			path = StoryBoards;
 			sourceTree = "<group>";
 		};
+		678634E82A7DA9DF008B3FA0 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				678634E92A7DAA06008B3FA0 /* StorageManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		67CF45842A7BE335003206B6 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 			children = (
 				678634E12A7C41DD008B3FA0 /* Models */,
 				678634E02A7C41CF008B3FA0 /* ViewControllers */,
+				678634E82A7DA9DF008B3FA0 /* Managers */,
 				678634DF2A7C41C4008B3FA0 /* App */,
 				678634E32A7C41F1008B3FA0 /* StoryBoards */,
 				678634E22A7C41E4008B3FA0 /* Sources */,
@@ -197,6 +208,7 @@
 				67CF45912A7BE335003206B6 /* AppDelegate.swift in Sources */,
 				67CF459B2A7BE335003206B6 /* CarSearchApp.xcdatamodeld in Sources */,
 				678634D52A7BF824008B3FA0 /* CarViewController.swift in Sources */,
+				678634EA2A7DAA06008B3FA0 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
