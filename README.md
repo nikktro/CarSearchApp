@@ -15,7 +15,7 @@ Contains the following features:
 
 <br />
 
-https://github.com/nikktro/CarSearchApp/assets/23638348/80afea44-5b60-4325-b674-52d745e46276
+https://github.com/nikktro/CarSearchApp/assets/23638348/5d0e4f21-3516-44bb-899d-5247a72469b1
 
 <br />
 
